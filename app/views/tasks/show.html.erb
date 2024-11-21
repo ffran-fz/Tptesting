@@ -1,0 +1,10 @@
+<!-- app/views/tasks/show.html.erb -->
+<h1><%= @task.title %></h1>
+<p>Completed: <%= @task.completed ? 'Yes' : 'No' %></p>
+<p><%= @task.body %></p> <!-- Muestra el contenido del body de la tarea -->
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back to list', tasks_path %>
+<% if notice %>
+  <div class="notice"><%= notice %></div>
+<% end %>
